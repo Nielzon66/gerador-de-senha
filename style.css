@@ -52,6 +52,7 @@ button {
   color: white;
   border: none;
   padding: 5px;
+  align-items: center;
 }
 
 
@@ -63,12 +64,15 @@ button {
   main {
     width: 95vw;       /* ocupa quase toda a largura da tela */
     padding: 15px;     /* menos espaço interno */
-    box-shadow: none;  /* visual mais clean no mobile */
+    align-items:normal;
+    box-shadow: 0 1px 10px #ccc;  /* visual mais clean no mobile */
     gap: 10px;
   }
 
   main > div {
-    gap: 5px;          /* menor espaço entre itens, mantendo tudo na mesma linha */
+    gap: 5px; 
+    display: flex;
+    align-items: center;         /* menor espaço entre itens, mantendo tudo na mesma linha */
   }
 
   input {
@@ -88,5 +92,7 @@ button {
     padding: 6px 10px;
     font-size: medium;
     width: 80%;       /* opcional: pode manter em 100% ou deixar como no desktop */
+    align-items: center;
+    display:block ;
   }
 }
