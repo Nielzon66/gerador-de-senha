@@ -63,9 +63,9 @@ button {
 
   main {
     width: 95vw;       /* ocupa quase toda a largura da tela */
-    padding: 15px;     /* menos espaço interno */
+    padding: 10px;     /* menos espaço interno */
     align-items:normal;
-    box-shadow: 0 1px 10px #ccc;  /* visual mais clean no mobile */
+    box-shadow: 0 5px 5px #ccc;  /* visual mais clean no mobile */
     gap: 10px;
   }
 
@@ -80,8 +80,8 @@ button {
   }
 
   input[type=checkbox] {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
   }
 
   input[type=range] {
