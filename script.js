@@ -58,3 +58,28 @@ const generatePassword = (
     passInput.value = password;
 
 };
+// Seleciona o botão de copiar
+const btnCopiar = document.querySelector("#copiar-btn");
+
+// Adiciona o evento de clique para copiar a senha
+btnCopiar.addEventListener("click", async () => {
+  const senha = passInput.value; // Pega a senha gerada no input
+
+  if (!senha) return; // Se não tiver senha, não faz nada
+
+  try {
+    // Copia a senha para a área de transferência
+    await navigator.clipboard.writeText(senha);
+
+    // Feedback visual para o usuário
+    btnCopiar.textContent = "Copiado!";
+
+    // Após 2 segundos, volta ao texto original
+    setTimeout(() => {
+      btnCopiar.textContent = "Copiar senha";
+    }, 2000);
+  } catch (err) {
+    console.error("Erro ao copiar senha:", err);
+    btnCopiar.textContent = "Erro ao copiar";
+  }
+});
