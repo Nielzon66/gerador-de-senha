@@ -54,29 +54,38 @@ button {
   padding: 5px;
 }
 
-@media (max-width: 412px) {
+@media (max-width: 414px) {
   * {
-    font-size: medium; /* fonte um pouco menor, mas ainda legível */
+    font-size: medium; /* reduz um pouco a fonte para caber na tela */
   }
 
   main {
-    width: 95vw;        /* ocupa 95% da largura da tela */
-    padding: 15px;      /* padding interno menor */
-    box-shadow: none;   /* opcional: menos sombra em telas pequenas */
-    gap: 10px;          /* reduz o espaçamento entre os elementos */
+    width: 95vw;       /* ocupa quase toda a largura da tela */
+    padding: 15px;     /* menos espaço interno */
+    box-shadow: none;  /* visual mais clean no mobile */
+    gap: 10px;
   }
 
   main > div {
-    gap: 8px;           /* reduz espaço horizontal entre itens */
-    flex-wrap: wrap;    /* permite quebra de linha se necessário */
+    gap: 5px;          /* menor espaço entre itens, mantendo tudo na mesma linha */
+  }
+
+  input {
+    padding: 4px;      /* menos espaço interno */
+  }
+
+  input[type=checkbox] {
+    width: 10px;
+    height: 10px;
   }
 
   input[type=range] {
-    width: 100%;        /* garante que o range se ajuste à tela */
+    width: 80%;       /* ocupa toda a largura do container */
   }
 
   button {
-    width: 100%;        /* botão ocupa toda a largura */
-    padding: 8px;
+    padding: 6px 10px;
+    font-size: medium;
+    width: 80%;       /* opcional: pode manter em 100% ou deixar como no desktop */
   }
 }
