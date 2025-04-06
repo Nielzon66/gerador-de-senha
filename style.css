@@ -58,7 +58,7 @@ button {
 
 @media (max-width: 414px) {
   * {
-    font-size: medium; /* reduz um pouco a fonte para caber na tela */
+    font-size:smalls ; /* reduz um pouco a fonte para caber na tela */
   }
 
   main {
