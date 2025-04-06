@@ -1,82 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins';
-  font-size: x-large;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f7f7f7;
-}
-
-main {
-  padding: 20px;
-  box-shadow: 0 1px 10px #ccc;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-main > div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-input {
-  padding: 5px;
-  outline: none;
-  accent-color: blueviolet;
-  border-color: blueviolet;
-}
-
-input[type=checkbox] {
-  width: 18px;
-  height: 18px;
-}
-
-input[type=range] {
-  width: 90%;
-}
-
-button {
-  background-color: blueviolet;
-  cursor: pointer;
-  color: white;
-  border: none;
-  padding: 5px;
-}
-
-@media (max-width: 430px) {
-    main {
-      width: 100%;
-      padding: 16px;
-      border-radius: 0;
-      box-shadow: none;
-    }
-  
-    div {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 5px;
-    }
-  
-    input[type="text"],
-    input[type="range"],
-    button {
-      width: 100%;
-      font-size: 1rem;
-    }
-  
-    label {
-      font-size: 0.95rem;
-    }
+@media (max-width: 412px) {
+  * {
+    font-size: medium; /* fonte um pouco menor, mas ainda legível */
   }
-  
+
+  main {
+    width: 95vw;        /* ocupa 95% da largura da tela */
+    padding: 15px;      /* padding interno menor */
+    box-shadow: none;   /* opcional: menos sombra em telas pequenas */
+    gap: 10px;          /* reduz o espaçamento entre os elementos */
+  }
+
+  main > div {
+    gap: 8px;           /* reduz espaço horizontal entre itens */
+    flex-wrap: wrap;    /* permite quebra de linha se necessário */
+  }
+
+  input[type=range] {
+    width: 100%;        /* garante que o range se ajuste à tela */
+  }
+
+  button {
+    width: 100%;        /* botão ocupa toda a largura */
+    padding: 8px;
+  }
+}
